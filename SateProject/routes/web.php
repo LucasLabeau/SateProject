@@ -11,6 +11,13 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+<?php
+*/
+
+    Route::get('/{any}', function(){
+            return view('landing');
+    })->where('any', '.*');
