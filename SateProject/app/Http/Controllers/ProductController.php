@@ -9,8 +9,8 @@
     {
         public function index()
         {
-          //Retorna todos los productos
-            return response()->json(Product::all(),200);
+          $products = DB::select('select * from products', [15]);
+          return view('user.index', ['users' => $users]);
         }
 
         public function store(Request $request)
