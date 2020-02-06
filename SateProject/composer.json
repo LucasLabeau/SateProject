@@ -60,3 +60,6 @@
         ]
     }
 }
+"require": {
+    "laravelcollective/html": "~5.0"
+}

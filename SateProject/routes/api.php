@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 */
-Route::post('login', 'UserController@login');
+/*Route::post('login', 'UserController@login');
     Route::post('register', 'UserController@register');
     Route::get('/products', 'ProductController@index');
     Route::post('/upload-file', 'ProductController@uploadFile');
@@ -34,3 +34,4 @@ Route::post('login', 'UserController@login');
         Route::resource('/orders', 'OrderController');
         Route::resource('/products', 'ProductController')->except(['index','show']);
     });
+*/

@@ -25,7 +25,7 @@
                 $status = 200;
                 $response = [
                     'user' => Auth::user(),
-                    'token' => Auth::user()->createToken('bigStore')->accessToken,
+                    'token' => Auth::user()->createToken('SateProject')->accessToken,
                 ];
             }
 
@@ -54,7 +54,7 @@
 
             return response()->json([
                 'user' => $user,
-                'token' => $user->createToken('bigStore')->accessToken,
+                'token' => $user->createToken('SateProject')->accessToken,
             ]);
         }
 
@@ -69,5 +69,8 @@
           //Obtiene los detalles del usuario y retorna
             return response()->json($user);
         }
-
+        public function logout(Request $request) {
+          Auth::logout();
+          return redirect('/');
+        }
     }

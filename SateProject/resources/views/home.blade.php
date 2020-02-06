@@ -1,23 +1,52 @@
 @extends('layouts.app')
-
+<body>
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <section class="row justify-content-center">
+        <article class="col-sm-12 col-md-8" id="encabezadoHome">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">¡Bienvenido!</div>
 
-                <div class="card-body">
+                <section class="card-body" id ="loginBoolean">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <article class="alert alert-success" role="alert">
                             {{ session('status') }}
-                        </div>
-                    @endif
+                            <h4>¡Entraste con éxito! Me felicito.</h4>
 
-                    You are logged in!
-                </div>
+                        @else
+                          <h4>¿Nuevo al sitio? <br>
+                            Podés registrarte <a href="{{ route('register') }}">acá</a>
+                          </h4>
+
+                    @endif
+                    </article>
+                </section>
             </div>
-        </div>
-    </div>
+        </article>
+        <section class="row justify-content-center">
+        <article class="col-sm-12 col-md-8" id="contenidoBajoHome" >
+          <div class="card">
+              <div class="card-body">
+                  <h3>Hace años que quisimos llevar adelante este proyecto y
+                    estamos muy felices por su visita. Mirá libremente pero
+                    SI ROMPES LO PAGAS.</h3>
+              </div>
+          </div>
+        </article>
+        </section>
+        <section class="row justify-content-center">
+        <article class="col-sm-12 col-md-8" id="contenidoAltoHome" >
+          <div class="card">
+              <div class="card-body">
+                  <h5>Hacé click en la foto para ver nuestros productos</h5>
+                  <a href="{{ route('products') }}"><img id="homeImg"src="img/products-link-img.jpg" alt="Imagen que lleva a los
+                   productos"></a>
+
+              </div>
+          </div>
+        </article>
+        </section>
+    </section>
 </div>
 @endsection
+</body>

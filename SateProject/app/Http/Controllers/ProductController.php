@@ -9,8 +9,9 @@
     {
         public function index()
         {
-          $products = DB::select('select * from products', [15]);
-          return view('user.index', ['users' => $users]);
+          $products = Product::paginate(3);
+          $vac = compact('products');
+          return view('productsList', $vac);
         }
 
         public function store(Request $request)

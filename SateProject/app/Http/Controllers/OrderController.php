@@ -41,7 +41,7 @@
                 'status' => (bool) $order,
                 'data'   => $order,
                 'message' => $order ? 'Order Created!' : 'Error Creating Order'
-            ]);
+            ]) -> redirect('website.order');
         }
 
         public function show(Order $order)

@@ -17,24 +17,24 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'order'], function(){
-  Route::get('/products', 'ProductsController@index');
-  Route::get('/products/create', 'ProductsController@uploadFile');
-  Route::post('/products', 'ProductsController@store');
-  Route::get('/products/{id}', 'ProductsController@show');
-  Route::patch('/products/{id}', 'ProductsController@edit');
-  Route::delete('/products/{id}', 'ProductsController@destroy');
+  Route::get('/products', 'ProductController@index');
+  Route::get('/products/create', 'ProductController@uploadFile');
+  Route::post('/products', 'ProductController@store');
+  Route::get('/products/{id}', 'ProductController@show');
+  Route::patch('/products/{id}', 'ProductController@edit');
+  Route::delete('/products/{id}', 'ProductController@destroy');
   });
   Route::get('/login', function () {
-    return view('login');
-  });
+    return view('website.login');
+  }) -> name('login');
   Route::get('/register', function () {
-    return view('register');
-  });
-
+    return view('website.register');
+  }) -> name('register');
 
     Route::post('login', 'UserController@login');
     Route::post('register', 'UserController@register');
-    Route::get('/products', 'ProductController@index');
+    Route::post('logout', 'UserController@Logout') -> name('logout');
+    Route::get('/products', 'ProductController@index') -> name('products');
     Route::post('/upload-file', 'ProductController@uploadFile');
     Route::get('/products/{product}', 'ProductController@show');
     Route::get('/users','UserController@index');
@@ -43,3 +43,5 @@ Route::group(['middleware' => 'order'], function(){
     Route::get('users/{user}/orders','UserController@showOrders');
     Route::patch('products/{product}/units/add','ProductController@updateUnits');
     Route::patch('orders/{order}/deliver','OrderController@deliverOrder');
+    Route::get('/order', 'OrderController@show') -> name('order');
+    Route::post('order', 'OrderController@store');
