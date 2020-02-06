@@ -11,12 +11,11 @@
 |
 */
 
-/*
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-<?php
-*/
+
 Route::group(['middleware' => 'order'], function(){
   Route::get('/products', 'ProductsController@index');
   Route::get('/products/create', 'ProductsController@uploadFile');
@@ -24,7 +23,15 @@ Route::group(['middleware' => 'order'], function(){
   Route::get('/products/{id}', 'ProductsController@show');
   Route::patch('/products/{id}', 'ProductsController@edit');
   Route::delete('/products/{id}', 'ProductsController@destroy');
-});
+  });
+  Route::get('/login', function () {
+    return view('login');
+  });
+  Route::get('/register', function () {
+    return view('register');
+  });
+
+
     Route::post('login', 'UserController@login');
     Route::post('register', 'UserController@register');
     Route::get('/products', 'ProductController@index');
@@ -36,9 +43,3 @@ Route::group(['middleware' => 'order'], function(){
     Route::get('users/{user}/orders','UserController@showOrders');
     Route::patch('products/{product}/units/add','ProductController@updateUnits');
     Route::patch('orders/{order}/deliver','OrderController@deliverOrder');
-    Route::get('/login', function () {
-        return view('login');
-    });
-    Route::get('/signup', function () {
-        return view('signup');
-    });
