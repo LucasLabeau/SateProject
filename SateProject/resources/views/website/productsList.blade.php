@@ -17,9 +17,6 @@
           <img src="{{ $product["image"]}}" alt="imagen del imperdible producto">
           <form class="form-group" action="{{ route('order') }}" method="post" enctype="multipart/form-data">
         @csrf
-            <div class="form-group" style="display:none;">
-              <input type="text" name= "product_id" value="{{$product["id"]}}">
-          </div>
           <div class="form-group">
             <label for="quantity">Cantidad: </label>
             <input type="number" name="quantity" value="">
@@ -28,6 +25,9 @@
             <label for="address">Dirección: </label>
             <input type="text" name="address" value="">
           </div>
+          <div class="form-group" style="display:none;">
+            <input type="text" name= "product_id" value="{{$product["id"]}}">
+        </div>
           <div class="form-group">
             <button type="submit" name="button">Comprar</button>
           </div>

@@ -17,6 +17,7 @@ li{
 .yellow{
   background-color: yellow;
 }
+
 #encabezadoHome {
   display: flex;
   align-items: center;
@@ -41,6 +42,7 @@ li{
   height: 400px;
 }
 body {
+  background-image: url("../img/bgi.jpg");
   background-color: black;
   z-index: -1000;
 }
