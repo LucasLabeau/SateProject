@@ -1,0 +1,60 @@
+/* body{
+background-image: url("imagenes/backgroundd.jpg");
+font-family: sans-serif;
+color: grey;
+}
+nav {
+  z-index: 100;
+}
+/* h1 {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  border-style: double;
+  border-color: rgba(105,105,105,0.7);
+  border-radius: 5px;
+  z-index: -10;
+} */
+/* .container {
+  border-style: double;
+  border-color: rgba(105,105,105,0.7);
+  border-radius: 5px;
+  height: 700px;
+  width: 900px;
+  overflow: hidden;
+  z-index: -10;
+}
+#form_contacto {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  position: relative;
+  left: 300px;
+  top: 50px;
+  margin-left: 0 auto;
+  width: 900px;
+} */
+
+/* #msj_contacto_cartel {
+  height: 100px;
+  margin-top: 20px;
+
+}
+
+#pais {
+  margin-top: 20px;
+}
+
+#nombre_contacto {
+  margin-top: 20px;
+}
+
+#apellido_contacto {
+  margin-top: 20px;
+}
+
+#mail_contacto {
+  margin-top: 20px;
+} */

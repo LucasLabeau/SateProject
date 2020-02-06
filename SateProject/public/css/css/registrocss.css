@@ -1,0 +1,31 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    border-style: double;
+    border-color: rgba(105,105,105,0.7);
+    border-radius: 5px;
+  }
+  #form_registro {
+  flex-flow: column wrap;
+  align-content: center;
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  position: relative;
+  top: 50px;
+  margin-left: 0 auto;
+  }
+  #title {
+    text-align: center;
+  }
+  .container{
+    text-align: center;
+  }
+  label {
+    position: relative;
+    right: 10px;
+    margin-top: 15px;
+  }
+  button {
+    margin-top: 15px;
+  }

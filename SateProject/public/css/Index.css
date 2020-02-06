@@ -1,9 +1,19 @@
-#asd{
-  width: 100%;
+.agregar{
+  color:black;
+  padding: 0px;
 }
-#navegacion{
-  width: 100%;
+.marca{
+  text-align: center;
 }
-#navbarSupportedContent {
-  width: 100%;
+.sinpadding{
+  padding: 0px;
+}
+li{
+  width:100%;
+}
+.red{
+  background-color: red;
+}
+.yellow{
+  background-color: yellow;
 }
