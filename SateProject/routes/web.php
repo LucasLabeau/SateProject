@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('website.home');
 });
 
 Route::group(['middleware' => 'order'], function(){
@@ -25,10 +25,10 @@ Route::group(['middleware' => 'order'], function(){
   Route::delete('/products/{id}', 'ProductController@destroy');
   });
   Route::get('/login', function () {
-    return view('website.login');
+    return view('Auth.login');
   }) -> name('login');
   Route::get('/register', function () {
-    return view('website.register');
+    return view('Auth.register');
   }) -> name('register');
 
     Route::post('login', 'UserController@login');

@@ -11,7 +11,7 @@
         {
           $products = Product::paginate(3);
           $vac = compact('products');
-          return view('productsList', $vac);
+          return view('website.productsList', $vac);
         }
 
         public function store(Request $request)

@@ -25,11 +25,11 @@
             <label for="address">Dirección: </label>
             <input type="text" name="address" value="">
           </div>
-          <div class="form-group" style="display:none;">
-            <input type="text" name= "product_id" value="{{$product["id"]}}">
+          <div class="form-group">
+            <input type="hidden" name= "product_id" value="{{$product["id"]}}">
         </div>
           <div class="form-group">
-            <button type="submit" name="button">Comprar</button>
+            <button class="btn btn-primary" type="submit" name="button">Comprar</button>
           </div>
         </form>
       </div>
