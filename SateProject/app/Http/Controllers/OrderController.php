@@ -30,6 +30,10 @@
         public function store(Request $request)
         {
           // Crea una nueva orden
+          $UsuarioLog = Auth::user();
+          if ($UsuarioLog == null) {
+            return redirect('login');
+          }
             $order = Order::create([
                 'product_id' => $request->product_id,
                 'user_id' => Auth::id(),

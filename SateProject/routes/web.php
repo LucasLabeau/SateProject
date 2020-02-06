@@ -30,18 +30,21 @@ Route::group(['middleware' => 'order'], function(){
   Route::get('/register', function () {
     return view('Auth.register');
   }) -> name('register');
+  Route::get('/products/create', function() {
+    return view('admin.create');
+  });
 
     Route::post('login', 'UserController@login');
     Route::post('register', 'UserController@register');
     Route::post('logout', 'UserController@Logout') -> name('logout');
     Route::get('/products', 'ProductController@index') -> name('products');
     Route::post('/upload-file', 'ProductController@uploadFile');
-    Route::get('/products/{product}', 'ProductController@show');
+    Route::get('/products/{product_id}', 'ProductController@show');
     Route::get('/users','UserController@index');
-    Route::get('users/{user}','UserController@show');
-    Route::patch('users/{user}','UserController@update');
-    Route::get('users/{user}/orders','UserController@showOrders');
-    Route::patch('products/{product}/units/add','ProductController@updateUnits');
+    Route::get('users/{user_id}','UserController@show');
+    Route::patch('users/{user_id}','UserController@update');
+    Route::get('users/{user_id}/orders','UserController@showOrders');
+    Route::patch('products/{product_id}/units/add','ProductController@updateUnits');
     Route::patch('orders/{order}/deliver','OrderController@deliverOrder');
     Route::get('/order', 'OrderController@show') -> name('order');
     Route::post('order', 'OrderController@store');

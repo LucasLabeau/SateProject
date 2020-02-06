@@ -12,7 +12,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/passport": "^8.3",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "laravel/framework": "5.2.*"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
@@ -59,7 +60,4 @@
             "@php artisan key:generate --ansi"
         ]
     }
-}
-"require": {
-    "laravelcollective/html": "~5.0"
 }

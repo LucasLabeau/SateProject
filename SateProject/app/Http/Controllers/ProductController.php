@@ -29,7 +29,7 @@
                 'status' => (bool) $product,
                 'data'   => $product,
                 'message' => $product ? 'Producto creado!' : 'Error creando el producto'
-            ]);
+            ]) -> redirect('products');
         }
 
         public function show(Product $product)
